@@ -1,28 +1,41 @@
 import 'package:flutter/material.dart';
 
-void main() {
+void main(){
   runApp(AppFlutter());
 }
-
-class AppFlutter extends StatelessWidget {
+class AppFlutter extends StatelessWidget{
   @override
-  widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Magazine',
+      title : 'Hello Flutter',
       debugShowCheckedModeBanner: false,
-      home: PageAcceuil(),
+      home: HomePage(),
     );
   }
 }
 
-class PageAccueil extends StatelessElement{
+class HomePage extends StatelessWidget{
   @override
-  widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar (
-        title: Text('Hello Flutter'),
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: Text(
+          'Agence Digital Turb',
+          style: TextStyle(color: 
+            Colors.white),
+       ),
         centerTitle: true,
-      )
-    )
+      ),
+      body: Container(color: Colors.blue[100],
+        child: Center(
+          child: Text("Bienvenue sur l'agence",
+          style: TextStyle(color: Colors.white),
+        ),
+         
+      ),
+    );
+    
+        
   }
 }
